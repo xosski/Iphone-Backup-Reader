@@ -1,0 +1,19 @@
+[project]
+name = "iphone-backup-reader"
+version = "0.1.0"
+description = "A local desktop browser for iPhone backups and connected iPhones"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+device = ["pymobiledevice3>=11,<12", "chardet<6"]
+
+[project.scripts]
+iphone-backup-reader = "iphone_backup_reader.app:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["iphone_backup_reader*"]
